@@ -192,6 +192,32 @@ a:focus {
     padding: 0;
 }
 
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
 
 /*
     Objects: Row
@@ -215,6 +241,11 @@ a:focus {
     .o-row {
         padding-left: 48px;
         padding-right: 48px;
+    }
+
+    .o-row--md{
+        padding-top: 48px;
+        padding-bottom: 24px;
     }
 
     .o-row--lg {
@@ -447,9 +478,13 @@ a:focus {
     .c-nav__link {
         padding: 8px 16px;
     }
-    .c-nav__link:first-child{
+    .c-nav__list:first-child{
         padding-left: 0;
     }
+    .c-nav__list:last-child{
+        padding-right: 0;
+    }
+
 }
 
 
@@ -486,6 +521,17 @@ a:focus {
 .u-max-width-none {
     max-width: none !important;
 }
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
 
 /*
     Utility: Flex
